@@ -1,0 +1,12 @@
+{
+    "port": 8080,
+    "database": {
+        "connection-string": "root:root@tcp(127.0.0.1:3306)/spotify"
+    },
+    "spotify": {
+        "oauth": {
+            "client-id": "b9eb2993bf6a4a2daad8d3d2d4c38423",
+            "client-secret": "547b6639a65f4bdcb0b4d1149b047001"
+        }
+    }
+}

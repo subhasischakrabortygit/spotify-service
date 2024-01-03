@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Spotify Service
+  version: 1.0.0
+paths:
+  /create-track/{isrc}:
+    post:
+      summary: Create a track
+      parameters:
+        - name: isrc
+          in: path
+          description: International Standard Recording Code
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Track created successfully
+        '400':
+          description: Bad Request
+        '500' :
+         description: Service not available
+
+  /get-metadata/{isrc}:
+    get:
+      summary: Retrieve metadata by ISRC
+      parameters:
+        - name: isrc
+          in: path
+          description: International Standard Recording Code
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Metadata retrieved successfully
+
+  /get-metadata-by-artist/{artist}:
+    get:
+      summary: Retrieve metadata by artist
+      parameters:
+        - name: artist
+          in: path
+          description: Artist name
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Metadata retrieved successfully
